@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
+from django.conf import ENVIRONMENT_VARIABLE
 import django_heroku
 from decouple import config
 import dj_database_url
@@ -24,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
-
+#SECRET_KEY = 'django-insecure-+5kbuat7&*&7cr_x@^tac9_ccd(hhpb5v3^kzihz+k6ef*&-hw'
+#This secret key is from my portfolio_site
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
